@@ -1,8 +1,10 @@
 #Lista vacia
 lst = ["Perico los Palotes", "Maria las Petunias"]
+#               0                     1
 
 #Ciclo infinito
 while True:
+    #CRUD = Create Read Update Delete
     print("1. Agregar nombre")
     print("2. Modificar nombre")
     print("3. Mostrar lista")
@@ -14,6 +16,7 @@ while True:
     if op == '1':
         #Agregando elementos a la lista
         nombre = input("Ingrese el nombre a agregar\n")
+        #Agregamos algo a la lista con append
         lst.append(nombre)
         print("Se agrego un nuevo nombre a la lista")
         
@@ -27,14 +30,15 @@ while True:
         lst[i] = nuevo_nombre
     
     elif op == '3':
+        #len cuenta cuantos elementos hay en la lista
         if len(lst) == 0:
             print("No hay elementos en la lista")
         else:
             #print(lst)
             #recorrer lista e imprimir por separado sus datos
-            for i in lst:
-                #i representa CADA ELEMENTO de la lista
-                print(f'Nombre: {i}')
+            for v in lst:
+                #v (value) representa CADA ELEMENTO de la lista
+                print(f'Nombre: {v}')
                 print('-------------------------')
         
     elif op == '4':
