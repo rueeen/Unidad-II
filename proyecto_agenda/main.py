@@ -29,8 +29,8 @@ while True:
     if opcion == '1':
         print('==== Agregando Contacto ====')
         nombre = input('Ingrese su nombre\n').capitalize()
-        apellido = input('Ingrese su apellido\n').capitalize()
-        numero = int(input('Ingrese su numero de telefono\n'))
+        apellido = input('Ingrese su apellido\n').capitalize() 
+        numero = int(input('Ingrese su numero de telefono\n')) #Validar que sean 8 numeros ingresados
         
         contacto = {'nombre':nombre, 'apellido':apellido, 'numero':numero}
         
@@ -77,7 +77,7 @@ while True:
             opcion = input('Ingrese su opcion\n')
             
             if opcion == '3':
-                numero = int(input('Ingrese nuevo numero\n'))
+                numero = int(input('Ingrese nuevo numero\n'))  #Validar que sean 8 numeros ingresados
                 
                 resultado['numero'] = numero
                 
