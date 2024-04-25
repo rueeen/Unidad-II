@@ -21,6 +21,7 @@ while True:
     print('1. Agregar contacto')
     print('2. Mostrar agenda')
     print('3. Eliminar contacto')
+    print('4. Modificar contacto')
     print('0. Salir') 
     
     opcion = input('Ingrese su opcion\n')
@@ -60,3 +61,27 @@ while True:
             agenda.remove(respuesta)
         else:
             print("No se encontro contacto")
+            
+    elif opcion == '4':
+        print('==== Modificar contacto ====')
+        nombre = input('Ingrese nombre a modificar\n').capitalize()
+        apellido = input('Ingrese apellido a modificar\n').capitalize
+        
+        resultado = buscarContacto(nombre, apellido, agenda)
+        
+        if resultado is not None:
+            print('1. Modificar nombre')
+            print('2. modificar apellido')
+            print('3. modificar numero')
+            
+            opcion = input('Ingrese su opcion\n')
+            
+            if opcion == '3':
+                numero = int(input('Ingrese nuevo numero\n'))
+                
+                resultado['numero'] = numero
+                
+                print('Numero modificado')
+                
+        else:
+            print('Contacto no encontrado')
