@@ -53,6 +53,8 @@ while True:
             
             if len(str(numero)) != 8:
                 print('Deben ser 8 caracteres.')
+            elif nombre.strip() == '' or apellido.strip() == '':
+                print('El nombre y/o apellido esta vacio')
             else:        
                 contacto = {'nombre':nombre, 'apellido':apellido, 'numero':numero}
                 agenda.append(contacto)
